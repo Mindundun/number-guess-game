@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img
+      src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=0,50,100&height=120&section=header&text=👋민경이와 함께하는 숫자 맞추기 게임👋&fontColor=3A4A51&fontSize=40"
+    />
+    <div
+      id="resultArea"
+      style="text-align: center; font-size: 24px; font-weight: bold"
+    >
+      이곳에 결과가 나옵니다.
+    </div>
+    <div
+      id="chanceArea"
+      style="
+        text-align: center;
+        font-size: 15px;
+        color: #555;
+        background-color: #ffffff;
+        padding: 10px 12px;
+        border-radius: 8px;
+        max-width: 200px;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      "
+    >
+      남은 찬스 : 5번
+    </div>
+    <div style="text-align: center; margin-top: 15px">
+      <input
+        type="number"
+        id="userInput"
+        style="
+          display: inline-block;
+          margin: 0 auto;
+          width: 100px;
+          height: 30px;
+          padding: 5px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        "
+      />
+      <button
+        id="playButton"
+        style="
+          width: 100px;
+          height: 36px;
+          padding: 5px;
+          background-color: #a8dadc; /* 파스텔 민트 */
+          color: #1d3557; /* 짙은 파란색 텍스트 */
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.3s ease, box-shadow 0.3s ease,
+            transform 0.1s ease;
+          margin-right: 10px;
+        "
+        onmouseover="this.style.backgroundColor='#89c8ca'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.3)'; this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.backgroundColor='#a8dadc'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'"
+      >
+        시작!
+      </button>
+      <button
+        id="resetButton"
+        style="
+          width: 100px;
+          height: 36px;
+          padding: 5px;
+          background-color: #f4a6a6; /* 파스텔 핑크 */
+          color: #6b4226; /* 짙은 갈색 텍스트 */
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          font-weight: 600;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          transition: background-color 0.3s ease, box-shadow 0.3s ease,
+            transform 0.1s ease;
+        "
+        onmouseover="this.style.backgroundColor='#e68b8b'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.3)'; this.style.transform='translateY(-2px)'"
+        onmouseout="this.style.backgroundColor='#f4a6a6'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)'"
+      >
+        리셋
+      </button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
